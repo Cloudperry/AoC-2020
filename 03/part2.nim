@@ -16,14 +16,12 @@ let
 
 var treesHitPerSlope: array[slopes.len, int]
 for slopeI, slope in slopes:
-  var rowN, treesHit: int
-  while rowN in 0 .. input.high - 1:
-    rowN += slope.y
-    let
-      row = input[rowN]
-      xCoord = slope.x * (rowN div slope.y) mod rowLen
+  var x, y, treesHit: int
+  while y in 0 .. input.high - 1:
+    y += slope.y
+    x += slope.x
     #echo fmt"checking coordinate ({xCoord}, {rowN})"
-    if row[xCoord] == '#':
+    if input[y][x mod rowLen] == '#':
       treesHit += 1
       #echo fmt"hit a tree at ({xCoord}, {rowN})"
   echo fmt"hit {treesHit} trees with slope: {slope}"
