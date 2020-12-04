@@ -14,6 +14,5 @@ proc travel(slopeY, slopeX: int): int =
     if input[y][x mod rowLen] == '#':
       result += 1
       #echo fmt"hit a tree at ({xCoord}, {rowN})"
-  echo fmt"hit {result} trees with slope: {slope}"
 
 echo travel(1, 1) * travel(3, 1) * travel(5, 1) * travel(7, 1) * travel(1, 2)
