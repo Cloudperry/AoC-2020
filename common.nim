@@ -1,9 +1,9 @@
 import os, strutils
 
-proc getInput*(): seq[string] =
-  for line in lines(getCurrentDir() & "/input.txt"):
+proc getInput*(filename = "input.txt"): seq[string] =
+  for line in lines(getCurrentDir() & '/' & filename):
     result.add(line)
 
-proc getInputAsInt*(): seq[int] =
-  for line in lines(getCurrentDir() & "/input.txt"):
+proc getInputAsInt*(filename = "input.txt"): seq[int] =
+  for line in lines(getCurrentDir() & '/' & filename):
     result.add parseInt(line)
