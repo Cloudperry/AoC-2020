@@ -1,4 +1,4 @@
---gc: orc
+--gc: arc
 --d: lto
 --opt: speed
 --outdir: bin
