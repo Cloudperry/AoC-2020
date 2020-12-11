@@ -3,7 +3,7 @@ import ../common
 
 var input = getInputAsInt()
 input.sort()
-#Only parts of sorted input.txt that can be changed, are those sequences with consecutive numbers that are not next to a 3 jolt jump in adapters
+#Only parts of sorted input that can be changed, are sequences with consecutive numbers excluding the ones that are part of a 3 jolt jump
 #Below is a table of how many permutations a sequence described above can have
 const permutationsForSeqLen = {
   1: 2, 2: 4, 3: 7, 4: 8
